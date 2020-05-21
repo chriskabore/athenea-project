@@ -408,3 +408,6 @@ gradle-app.setting
 **/build/
 src/main/resources/static/
 src/main/resources/templates/
+gradle/
+gradlew
+gradlew.bat

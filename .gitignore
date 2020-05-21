@@ -20,6 +20,7 @@ build/
 *.iws
 *.iml
 *.ipr
+out/
 
 ### NetBeans ###
 /nbproject/private/
@@ -34,6 +35,7 @@ build/
 # Compiled source #
 ###################
 *.com
+*.class
 *.dll
 *.exe
 *.o
@@ -77,13 +79,11 @@ Thumbs.db
 # Files for the ART/Dalvik VM
 *.dex
 
-# Java class files
-*.class
 
 # Generated files
 bin/
 gen/
-out/
+
 release/
 
 # Gradle files
@@ -244,8 +244,6 @@ cmake-build-*/
 # Mongo Explorer plugin
 .idea/**/mongoSettings.xml
 
-# File-based project format
-
 
 # IntelliJ
 
@@ -356,7 +354,6 @@ www/
 
 # Trash data
 $RECYCLE.BIN/
-
 UserInterfaceState.xcuserstate
 
 ### Java ###
@@ -371,11 +368,11 @@ UserInterfaceState.xcuserstate
 .mtj.tmp/
 
 # Package Files #
-
 *.war
 *.nar
 *.ear
 *.tar.gz
+
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
@@ -409,3 +406,5 @@ gradle-app.setting
 
 ### Gradle Patch ###
 **/build/
+src/main/resources/static/
+src/main/resources/templates/

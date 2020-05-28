@@ -26,7 +26,7 @@ public class MainController {
 		model.addAttribute("year", AtheneaUtil.COPYRIGHT_YEAR_INT);
 		model.addAttribute("numberOfNotifications", "3");
 		model.addAttribute("numberOfMessages", "2");
-		model.addAttribute("actionPlanActiveOption", "PA001 - Plan d'action budgetisé PAAQE 2018");
+		model.addAttribute("actionPlanActiveOption", "PA1 - PLAN D'ACTION BUDGETISE DU PAAQE 2018-2020");
 		model.addAttribute("actionPlanComponents",new String[] {"CMP001 - Elargissement de l'accès equitable...", "CMP002 - Amelioration de la qualité du processus...", "CMP003 - Renforcement de la capacité institutionnelle..."});
 		return "/dashboard";
 	}

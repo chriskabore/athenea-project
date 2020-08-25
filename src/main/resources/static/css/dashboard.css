@@ -1,0 +1,639 @@
+@import url('https://fonts.googleapis.com/css?family=Titillium+Web:200,200i,300,300i,400,400i,600,600i,700,700i,900');
+
+.dashboard-page{
+    width:100%!important;
+    min-height: auto;
+}
+
+.header{
+    background-color: #43425D;
+    padding: 0;
+}
+
+.navbar-brand .brand-logo-image{
+    width: 8rem;
+    border-radius: 0.4rem;
+}
+
+.menu-text {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 1.5rem;
+    margin-left: .5rem;
+    padding-left: .2rem;
+}
+.sidebar-column{
+    padding-left: 0;
+    padding-right: 0;
+}
+#navbar{
+    position: relative;
+}
+aside.navbar{
+    background-color: #43425D;
+    padding-left: 0;
+    border-top: 2px solid #9160A6;
+    padding-right: 0;
+    padding-bottom: 0;
+    padding-top: 0;
+    min-width: 100%;
+}
+
+.sidebar-column{
+    background-color: #43425D;
+}
+
+aside .nav-link{
+    color: white;
+    font-size: 1.05rem;
+    font-weight: 200;
+}
+
+#navbar ul, #navbar li{
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+    line-height: 2.1875rem;
+    cursor: pointer;
+}
+
+
+#navbar ul :not(collapsed) .arrow:before,
+#navbar li :not(collapsed) .arrow:before {
+    font-family: 'Font Awesome 5 Free';
+    content: "\f13a";
+    display: inline-block;
+    padding-left: 10px;
+    padding-right: 10px;
+    vertical-align: middle;
+    float: right;
+    font-weight: 900;
+}
+
+#navbar ul span.badge{
+    margin-right: 10px;
+    margin-top: 9px;
+    color: black;
+}
+
+
+#navbar ul .active,
+#navbar li .active {
+    border-left: 3px solid #9160A6;
+    background-color: #4f5b69;
+}
+#navbar ul .sub-menu li.active,
+#navbar li .sub-menu li.active {
+    color: #9160A6;
+}
+#navbar ul .sub-menu li.active a,
+#navbar li .sub-menu li.active a {
+    color: #9160A6;
+}
+#navbar ul .sub-menu li,
+#navbar li .sub-menu li {
+    background-color: #181c20;
+    border: none;
+    line-height: 28px;
+    border-bottom: 1px solid #23282e;
+    margin-left: 0px;
+}
+#navbar ul .sub-menu li:hover,
+#navbar li .sub-menu li:hover {
+    background-color: #020203;
+}
+#navbar ul .sub-menu li:before,
+#navbar li .sub-menu li:before {
+    font-family: 'Font Awesome 5 Free';
+    content: "\f105";
+    display: inline-block;
+    padding-left: 10px;
+    padding-right: 10px;
+    vertical-align: middle;
+    font-weight: 900;
+}
+
+#navbar li {
+    padding-left: 0px;
+    border-left: 3px solid #84a3c6;
+    border-bottom: 1px solid #23282e;
+}
+#navbar li a {
+    text-decoration: none;
+    color: #ffffff;
+}
+#navbar li a i {
+    padding-left: 10px;
+    width: 20px;
+    padding-right: 20px;
+}
+#navbar li:hover {
+    border-left: 3px solid #9160A6;
+    background-color: #4f5b69;
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    transition: all 1s ease;
+}
+
+#navbar .navbar-nav{
+    width:100%;
+}
+
+.sub-menu{
+    font-weight: 200;
+}
+
+.panel-title{
+    color: #ffffff;
+    font-size: 1.5rem;
+    font-weight: 100;
+}
+.toggler-icon{
+    color:#ffffff;
+}
+
+.navbar-light .navbar-toggler {
+    color: rgba(0,0,0,.5);
+    border-color: rgba(255,255,255,.5);
+}
+/*----------------------
+  Navbar
+-----------------------*/
+.notification{
+    align-items: center;
+}
+#notifications.nav-link .fa-bell{
+    color: white;
+    font-size: 0.9rem;
+    display: inline-block;
+}
+
+
+
+#notifications.nav-link .badge{
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-radius: 0;
+    font-weight: 400;
+    display: inline-block;
+    padding: .25em .4em;
+    font-size: 75%;
+    line-height: 1;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.notification-content{
+    font-size: .8rem;
+    margin-right: .5rem;
+}
+
+.notification-time small{
+    font-size: 0.75rem;
+    color: #999;
+}
+
+.all-notifications .all-notifications-icon{
+    margin-right:0.625rem;
+}
+
+#messages-notifications.nav-link .fa-envelope{
+    color:white;
+    font-size: 0.8rem;
+    display: inline-block;
+}
+
+#messages-notifications.nav-link .badge{
+    font-weight: 400;
+    border-radius: 0;
+    position: absolute;
+    top:0;
+    right:0;
+}
+
+#languages.nav-link span.d-none{
+    margin-left: .2rem;
+    vertical-align: middle;
+    color: white;
+    font-size: 0.85rem;
+}
+
+#languages{
+    color:white;
+    font-size: 0.85rem;
+}
+
+.logout{
+    color:white;
+    font-size: 0.85rem;
+}
+
+.dropdown-menu.show{
+    right: 0;
+    left: auto;
+    float: left;
+    margin-top: 16px;
+    margin-bottom: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    font-size: 1rem;
+    padding: 0 1rem;
+}
+
+.dropdown-menu .dropdown-item{
+    color: #666;
+    padding: 10px;
+
+}
+
+.dropdown-menu .dropdown-item.all-notifications{
+    font-size: 0.9rem;
+    font-weight: 200;
+}
+
+.msg-body .h5{
+    font-size: 1rem;
+}
+
+.msg-body span{
+    font-size: 0.85rem;
+    color:#777;
+    font-weight: 300;
+    display: block;
+}
+.msg-body small{
+    font-size: 0.75rem;
+    font-weight: 300;
+    color: #999;
+}
+
+.msg-profile{
+
+}
+
+.navbar-wrapper{
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navigation{
+    width:100%;
+}
+
+/** action plan tree ***/
+.action-plan-panel{
+    background-color: #f4f7fa;
+}
+
+.action-plan-selector-wrapper{
+    background: #ffffff;
+}
+
+.action-plan-selector-holder .action-plan-selector-holder{
+    padding: 15px 0;
+    font-size: 0.85em;
+    font-weight: 300;
+    color: #999;
+    margin-bottom: 0;
+}
+
+.selector-row{
+    padding-top: 0.75rem;
+    align-items: center;
+}
+.selector-label{
+    font-size: 1.1rem;
+    font-weight: 300;
+}
+
+.action-plan-selector{
+    width: 60%;
+    height: 2rem;
+    padding: .45rem .75rem;
+    line-height: 1.5;
+    font-size: 0.9rem;
+    font-weight: 300;
+}
+
+.card.action-plan-synthesis-holder,
+.card.action-plan-tree-holder{
+    height:60rem;
+}
+
+h5.action-plan-synthesis-text{
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: #a9afbbd1;
+}
+
+/******** tree view ***/
+
+ul.jqtree-tree .jqtree-moving > .jqtree-element .jqtree-title{
+    outline: #2ca5d7;
+}
+
+ul.jqtree-tree span.jqtree-border {
+    border: solid 2px #2ca5d7;
+}
+
+ul.jqtree-tree li.jqtree-ghost span.jqtree-line {
+    background-color: #2ca5d7;
+}
+
+ul.jqtree-tree li.jqtree-ghost span.jqtree-circle {
+    border: solid 2px #2ca5d7;
+}
+#action-plan-tree{
+    overflow-y: auto;
+    font-size: 0.85rem;
+    font-weight: 300;
+}
+
+div#action-plan-tree .jqtree_common {
+    position: relative;
+}
+
+div#action-plan-tree ul li{
+    margin: 0;
+    padding-left: 1.25rem;
+    line-height: 2.5rem;
+    position: relative;
+}
+div#action-plan-tree ul li::before, div#action-plan-tree ul li::after {
+    content: '';
+    position: absolute;
+    left: 0;
+}
+
+/* horizontal line on inner list items */
+div#action-plan-tree ul li::before {
+    border-top: 1px solid #dee2e6;
+    top: 2.4rem;
+    width: 1.25rem;
+    margin-left: -0.3125rem;
+}
+
+
+
+
+/* vertical line on list items */
+div#action-plan-tree ul li::after {
+    border-left: 1px solid #dee2e6;
+    height: 100%;
+    top: -2.250rem;
+    margin-left:-0.3rem;
+}
+
+ul.jqtree-tree .jqtree-toggler, ul.jqtree-tree .jqtree-toggler:hover {
+    color: #2ca5d7;
+}
+
+div#action-plan-tree>ul>li::before {
+    border-top: none;
+}
+
+div.action-plan-element-controls a{
+ color:#fff;
+}
+
+div.action-plan-element-controls .view-control{
+    background-color: #2ca5d7;
+}
+
+div.action-plan-element-controls .edit-control{
+    background-color: #eea457;
+}
+
+div.action-plan-element-controls .delete-control{
+    background-color: #da5762;
+}
+
+
+
+ul.jqtree-tree li.jqtree-selected > .jqtree-element,
+ul.jqtree-tree li.jqtree-selected > .jqtree-element:hover {
+    background-color: transparent;
+    background: none;
+    text-shadow: none;
+}
+
+ul.jqtree-tree li.jqtree-selected > .jqtree-element{
+    border: 1px solid #9160A6;
+}
+
+span.jqtree-title{
+    outline: none;
+}
+
+/*### Synthesis Card ####*/
+
+.status-card{
+    height:18rem;
+}
+
+.status-card-title{
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: #a9afbbd1;
+    color: #212529;
+    display:inline-block;
+}
+
+
+
+.budget-icon{
+    color: #0095D7;
+    color: #5FBFB6;
+}
+
+.finance-icon{
+    color: #F2811D;
+    color: #E9543C;
+}
+
+.progress-icon{
+    color: #0095D7;
+}
+
+.budget-total{
+    font-size: 0.85rem;
+    color: #A3A6B4;
+}
+
+span.total{
+    color:#515C6F;
+}
+
+/** chart **/
+
+.flex-wrapper {
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.single-chart {
+    width: 80%;
+    justify-content: space-around ;
+}
+
+.circular-chart {
+    display: block;
+    margin: 10px auto;
+    max-width: 80%;
+    max-height: 250px;
+}
+
+.circle-bg {
+    fill: none;
+    stroke: #eee;
+    stroke-width: 3.8;
+}
+
+.circle {
+    fill: none;
+    stroke-width: 2.8;
+    stroke-linecap: none;
+    animation: progress 1s ease-out forwards;
+}
+
+@keyframes progress {
+    0% {
+        stroke-dasharray: 0 100;
+    }
+}
+
+
+
+.circular-chart.green .circle {
+    stroke: #3c9ee5;
+    stroke: #30bae7;
+}
+
+
+.percentage,.percentage-text {
+    fill: #666;
+    font-family: sans-serif;
+    font-size: 0.35em;
+    text-anchor: middle;
+    font-family: "Titillium Web", sans-serif;
+}
+
+
+.action-plan-synthesis-holder .card-footer,
+.action-plan-synthesis-holder .card-header{
+    padding-top: 6px;
+    padding-bottom: 6px;
+    background-color: #fff;
+}
+
+.action-plan-synthesis-holder .card-body{
+    padding:5px;
+}
+
+.action-plan-synthesis-holder .view-more-link{
+    font-size: 0.8rem;
+    color:#9160A6;
+}
+
+.pie-charts-details-headings span,
+.budget-available-value,
+.budget-spent-value{
+    font-size: 0.8rem;
+}
+
+.pie-charts-details-headings span{
+    margin-bottom: 5px;
+}
+
+.budget-spent-heading,
+.budget-available-heading{
+    text-transform: capitalize;
+    font-size: 0.7rem;
+    font-weight: 500;
+    color:#727C8E;
+}
+
+.budget-spent-bullet{
+    color:#30bae7;
+    margin-right: 5px;
+}
+
+.budget-available-bullet{
+    color: #eee;
+    margin-right: 5px;
+}
+
+.budget-available-value,
+.budget-spent-value{
+    font-size: 0.85rem;
+}
+.budget-available-value{
+    color:#4AD991;
+}
+
+.budget-spent-value{
+    color:#30bae7;
+}
+
+/*#### Gauge**/
+.gauge-container{
+    margin-top: 2rem;
+    padding-left: 5rem;
+}
+
+.gauge {
+    width: 100%;
+    max-width: 250px;
+    font-family: "Roboto", sans-serif;
+    font-size: 32px;
+    color: #004033;
+}
+
+.gauge__body {
+    width: 100%;
+    height: 0;
+    padding-bottom: 50%;
+    background: #F0F2F8;
+    position: relative;
+    border-top-left-radius: 100% 200%;
+    border-top-right-radius: 100% 200%;
+    overflow: hidden;
+}
+
+.gauge__fill {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: inherit;
+    height: 100%;
+    background: #E9543C;
+    transform-origin: center top;
+    transform: rotate(0.25turn);
+    transition: transform 0.2s ease-out;
+}
+
+.gauge__cover {
+    width: 75%;
+    height: 150%;
+    background: #ffffff;
+    border-radius: 50%;
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translateX(-50%);
+
+    /* Text */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 25%;
+    box-sizing: border-box;
+}

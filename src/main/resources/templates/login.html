@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      th:with="lang=${#locale.language}" th:lang="${lang}">
+<head>
+    <th:block th:insert="fragments/general::stylesheets"/>
+    <title th:text="#{ui.page.login.title}"></title>
+</head>
+<body>
+    <div class="page login-page">
+        <div class="container">
+            <div class="row logo-image-row">
+                <div class="col-sm-6 col-md-6 col-lg-4 mx-auto">
+                    <!-- Logo container-->
+                    <div class="login-logo-container">
+                        <img th:src="@{/img/logo-athenea.png}" alt="athenea logo" class="logo-athenea img-fluid"/>
+                    </div>
+                </div>
+            </div>
+            <div class="row slogan-phrase-row">
+                <div class="col-sm-10 col-md-10 col-lg-10 col-xl-12 mx-auto">
+                    <!-- Phrase container -->
+                    <div class="phrase-container text-center">
+                        <p class="phrase" th:text="#{ui.login.phrase.text}">Manage your projects more easily and follow the progress of your action plans in real time.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row login-card-row">
+                <div class="col-md-8 mx-auto my-4">
+                    <!-- login card -->
+                    <div class="card login-card ">
+                        <div class="card-header">
+                            <p th:text="#{ui.login.signin.text}" class="sign-in-text">Sign in to your account</p>
+                        </div>
+                        <div class="card-body">
+                            <form th:action="@{/login}" method="post">
+                                <div th:if="${param.error}">
+                                    <div class="alert alert-danger">
+                                        Invalid username or password.
+                                    </div>
+                                </div>
+                                <div th:if="${param.logout}">
+                                    <div class="alert alert-info">
+                                        You have been logged out.
+                                    </div>
+                                </div>
+                                <div id="validation-message" class="d-none alert alert-danger" th:text="#{ui.login.form.validation.message.invalid.input}">Invalid username or password.</div>
+                                <div class="input-group email-input-group shakeable">
+                                    <div class="input-group-append">
+                                        <span class="input-group-text"><i class="fas fa-user fa-lg"></i></span>
+                                    </div>
+                                    <input  id="email-address" type="text" name="email" class="form-control input_user" value="" autofocus="autofocus" th:placeholder="#{ui.login.form.placeholder.user_email}">
+                                </div>
+                                <div class="input-group  password-input-group shakeable">
+                                    <div class="input-group-append">
+                                        <span class="input-group-text"><i class="fas fa-key fa-lg"></i></span>
+                                    </div>
+                                    <input id="password" type="password" name="password" class="form-control input_pass" value="" placeholder="password" th:placeholder="#{ui.login.form.placeholder.password}">
+                                </div>
+                                <div class="input-group justify-content-between">
+                                    <div class="form-check">
+                                        <input type="checkbox" class="form-check-input" id="remember-me">
+                                        <label for="remember-me" class="form-check-label" th:text="#{ui.login.form.label.remember_me}">Remember me</label>
+                                        <span></span>
+                                    </div>
+                                    <div class="password-forgoten">
+                                        <a href="/" th:href="@{/}" th:text="#{ui.login.form.label.password_forgotten}">Password forgotten?</a>
+                                    </div>
+                                </div>
+                                <div class="form-group login-button-group">
+                                    <div class="login-submit-container">
+                                        <input type="submit"
+                                               name="login-submit"
+                                               id="login-submit"
+                                               class="form-control btn btn-primary"
+                                               th:value="#{ui.login.form.button.login}">
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="card-footer d-flex justify-content-center">
+                            <span th:text="#{ui.login.noaccount.text}">Don't have an account?</span>&nbsp; <a class="signup-text" href="/" th:href="@{/}" th:text="#{ui.login.signup.text}">Sign up!</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <th:block th:insert="fragments/general::footer"/>
+    <th:block th:insert="fragments/general::scripts"/>
+    <script>
+        $(document).ready(function() {
+
+            // login form validation
+            $('#login-submit').click(function(e){
+                // prevent form submission
+                e.preventDefault();
+
+                // Code to check login
+                var hasError = false;
+                var emailRegEx = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
+                var emailAddressVal = $('#email-address').val();
+                var passwordVal = $('#password').val();
+                if(emailAddressVal==''){
+                    hasError=true;
+                }
+                if(!emailRegEx.test(emailAddressVal)){
+                    hasError=true;
+                }
+                if(passwordVal=='' || passwordVal.length <4){
+                    hasError=true;
+                }
+                // If fail
+                if(hasError==true){
+                    $('.shakeable').removeClass('animated shake');
+                    $('#email-address').addClass('is-invalid');
+                    $('#password').addClass('is-invalid');
+                    setTimeout(function()
+                    {
+                        $('.shakeable').addClass('animated shake')
+                    },1);
+                    $('#validation-message').removeClass('d-none');
+                    $('.form-control').on("focus",function(){
+                        $('#validation-message').addClass('d-none');
+                        $('#email-address').removeClass('is-invalid');
+                        $('#password').removeClass('is-invalid');
+                    });
+                    $('#email-address').val("");
+                    $('#password').val("");
+                }else{
+                    $("#login-submit").unbind('click').click();
+                }
+            });
+
+        });
+    </script>
+</body>
+</html>

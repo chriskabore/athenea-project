@@ -1,0 +1,63 @@
+.login-page{
+    width:100%!important;
+    background: #43425D;
+    min-height: calc(100vh - 2.2rem);;
+    padding-bottom: 0;
+}
+
+.login-logo-container{
+    text-align: center;
+    padding-top: 2rem;
+    padding-bottom: 4rem;
+}
+
+img.logo-athenea{
+    border-radius: 0.75rem;
+    width:14rem;
+}
+
+.phrase-container{
+    color:#ffffff;
+    text-align: center;
+}
+
+.phrase-container .phrase{
+    font-weight: 300;
+}
+
+.login-card{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    -moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 5px;
+}
+
+.card-header, .card-footer{
+    text-align: center;
+    color: #9160A6;
+
+}
+
+.input-group{
+    margin-top: 2rem;
+    margin-bottom:2.5rem;
+}
+
+label.form-check-label{
+    color: #9160A6;
+}
+
+.password-forgoten  a{
+    color: #9160A6;
+    display: inline-block;
+    padding-left: 4rem;
+}
+
+#login-submit{
+    background-color: #9160A6;
+    border-color: #9160A6;
+}
+
+.login-button-group{
+    margin-top: 2rem;
+}

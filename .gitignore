@@ -406,8 +406,8 @@ gradle-app.setting
 
 ### Gradle Patch ###
 **/build/
-src/main/resources/static/
-src/main/resources/templates/
+!src/main/resources/static/
+!src/main/resources/templates/
 gradle/
 gradlew
 gradlew.bat
